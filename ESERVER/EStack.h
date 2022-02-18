@@ -33,6 +33,7 @@ class EStack{
   unsigned int getMaxSize() {return _max_size;}
 
   bool isEmpty() {return _size==0 ? 1 : 0;}
+  bool isFull() {return _size == _max_size ? 1 : 0;}
 
   bool push(String data) {
     if (_size+1 > _max_size) {

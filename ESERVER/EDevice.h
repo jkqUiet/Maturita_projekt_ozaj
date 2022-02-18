@@ -11,6 +11,7 @@ class EDevice {
   String _fileName;
   String _lastSentFileName;
   int _lastSentPosition;
+  String _lastIDPacketSent = "";
 
 public:
   EDevice(const int id, String ip, String room);
@@ -22,9 +23,11 @@ public:
   void setIp(String ip) {_ipaddr = ip;};
   void setRoom(String room) {_room = room;};
   void setLastSentPosition(int lS) {_lastSentPosition = lS;}
+  void setLastIDSent(String IDPacket) {_lastIDPacketSent = IDPacket;}
   
   int getId() {return _id;};
   String getIpAddr() {return _ipaddr;};
+  String getLastIDSent() {return _lastIDPacketSent;}
   String getRoom() {return _room;};
   int getLSPos() {return _lastSentPosition;}
   bool getSending() {return _sending;};
