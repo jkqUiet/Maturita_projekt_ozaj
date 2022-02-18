@@ -15,7 +15,8 @@ class ESD
 public:
   ESD();
   void getData(String fileName, EStack& stack, int& pos);
-  bool writeData(String fileName, EStack* data);
+  bool writeData(String fileName, EStack* data);  
+  void replaceContentFile(String fileName, String content);
   bool createFile(String& fileName);
   void openFile(String fileName, bool type);
   void closeFile();
